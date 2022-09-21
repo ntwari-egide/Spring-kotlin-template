@@ -63,6 +63,7 @@ class StudentServiceImpl
     }
 
     override fun getStudentByAddress(address: String): List<Student> {
-        TODO("Not yet implemented")
+
+            return studentRepository.findByAddress(address)
     }
 }

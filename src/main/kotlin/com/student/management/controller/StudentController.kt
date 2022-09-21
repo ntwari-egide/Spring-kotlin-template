@@ -61,6 +61,12 @@ class StudentController (
 
     }
 
+    @GetMapping("/byaddress/{address}")
+    fun getStudentByAddress(@PathVariable address: String) : List<Student> {
+
+        return studentService.getStudentByAddress(address);
+
+    }
 
 
 
