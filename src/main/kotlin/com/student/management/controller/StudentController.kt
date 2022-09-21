@@ -33,5 +33,12 @@ class StudentController (
 
     }
 
+    @GetMapping("/byid/{id}")
+    fun getStudentById(id: Long) : Student {
+
+        return studentService.getStudentById(id);
+
+    }
+
 
 }
