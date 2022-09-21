@@ -4,7 +4,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "library_books")
-class LibraryBook(
+data class LibraryBook(
         var name: String? = null,
         var author: String? = null,
         var price: Double? = null,
