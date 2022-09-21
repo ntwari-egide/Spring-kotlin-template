@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -40,14 +41,14 @@ class StudentController (
     }
 
     @GetMapping("/byid/{id}")
-    fun getStudentById(@RequestParam id: Long) : Student {
+    fun getStudentById(@PathVariable id: Long) : Student {
 
         return studentService.getStudentById(id);
 
     }
 
     @PutMapping("/update/{id}")
-    fun updateStudent(@RequestParam id: Long, @RequestParam student: StudentDto) : Student {
+    fun updateStudent(@PathVariable id: Long, @RequestParam student: StudentDto) : Student {
 
         return studentService.updateStudent(id, student);
 
