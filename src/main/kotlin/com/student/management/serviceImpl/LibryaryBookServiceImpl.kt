@@ -5,8 +5,10 @@ import com.student.management.dtos.LibraryBookDto
 import com.student.management.repository.LibraryBookRepository
 import com.student.management.service.LibyaryBookService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 import java.util.Optional
 
+@Service
 class LibryaryBookServiceImpl
     (
         @Autowired
